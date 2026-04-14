@@ -32,3 +32,5 @@ Makefile*
 *.dmp
 *.bak
 docs/html/
+
+build/
