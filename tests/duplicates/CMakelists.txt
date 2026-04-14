@@ -1,0 +1,31 @@
+add_executable(duplicates_test)
+
+target_sources(duplicates_test PRIVATE main.cpp)
+
+target_link_libraries(duplicates_test PRIVATE qBreakpad::qBreakpad)
+
+# --------------------------------------------------------------------------
+# Windows: copy runtime DLLs and Qt platform plugins next to the exe
+# --------------------------------------------------------------------------
+if(WIN32)
+    add_custom_command(TARGET duplicates_test POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                $<TARGET_RUNTIME_DLLS:duplicates_test>
+                $<TARGET_FILE_DIR:duplicates_test>
+        COMMAND_EXPAND_LISTS
+        COMMENT "Copying runtime DLLs"
+    )
+
+    if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+        set(_qt_pkg "${qt_PACKAGE_FOLDER_DEBUG}")
+    else()
+        set(_qt_pkg "${qt_PACKAGE_FOLDER_RELEASE}")
+    endif()
+
+    add_custom_command(TARGET duplicates_test POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+                "${_qt_pkg}/plugins/platforms"
+                "$<TARGET_FILE_DIR:duplicates_test>/platforms"
+        COMMENT "Copying Qt platform plugins"
+    )
+endif()

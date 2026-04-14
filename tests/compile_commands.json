@@ -1,0 +1,8 @@
+[
+{
+  "directory": "E:/project/qBreakpad/tests/build/debug",
+  "command": "\"D:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DQT_CORE_LIB -DQT_NETWORK_LIB -external:IE:\\dev\\conan\\conan-cache\\p\\b\\qbread1103057639f4\\p\\include\\qBreakpad -external:IE:\\dev\\conan\\conan-cache\\p\\b\\qtb53c3329eaa3b\\p\\include -external:IE:\\dev\\conan\\conan-cache\\p\\b\\qtb53c3329eaa3b\\p\\include\\QtCore -external:IE:\\dev\\conan\\conan-cache\\p\\b\\qtb53c3329eaa3b\\p\\mkspecs\\win32-msvc -external:IE:\\dev\\conan\\conan-cache\\p\\b\\qtb53c3329eaa3b\\p\\include\\QtNetwork -external:W0 /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++17 -MDd -Zi /Foduplicates\\CMakeFiles\\duplicates_test.dir\\main.cpp.obj /Fdduplicates\\CMakeFiles\\duplicates_test.dir\\ /FS -c E:\\project\\qBreakpad\\tests\\duplicates\\main.cpp",
+  "file": "E:\\project\\qBreakpad\\tests\\duplicates\\main.cpp",
+  "output": "duplicates\\CMakeFiles\\duplicates_test.dir\\main.cpp.obj"
+}
+]
