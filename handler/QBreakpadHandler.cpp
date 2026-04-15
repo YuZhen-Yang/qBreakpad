@@ -24,7 +24,7 @@
 #include "QBreakpadHandler.h"
 #include "QBreakpadHttpUploader.h"
 
-#define QBREAKPAD_VERSION  0x000400
+#define QBREAKPAD_VERSION  0x000401
 
 #if defined(Q_OS_MAC)
 #include "client/mac/handler/exception_handler.h"

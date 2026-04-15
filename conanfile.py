@@ -6,7 +6,7 @@ from conan.tools.files import copy
 
 class QBreakpadConan(ConanFile):
     name = "qbreakpad"
-    version = "0.4.0"
+    version = "0.4.1"
     license = "LGPL-2.1"
     description = "Qt wrapper for Google Breakpad crash reporting (Windows/Linux)"
     topics = ("qt", "breakpad", "crash-reporting", "minidump")
