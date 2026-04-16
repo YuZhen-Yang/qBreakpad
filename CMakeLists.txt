@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
-project(qBreakpad VERSION 0.4.0 LANGUAGES CXX)
+project(qBreakpad VERSION 0.4.1 LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTOMOC ON)
 
@@ -42,6 +42,7 @@ if(UNIX AND NOT APPLE)
         ${BREAKPAD_SRC}/client/linux/minidump_writer/linux_core_dumper.cc
         ${BREAKPAD_SRC}/client/linux/minidump_writer/linux_dumper.cc
         ${BREAKPAD_SRC}/client/linux/minidump_writer/linux_ptrace_dumper.cc
+        ${BREAKPAD_SRC}/client/linux/minidump_writer/pe_file.cc
         ${BREAKPAD_SRC}/client/linux/minidump_writer/minidump_writer.cc
         ${BREAKPAD_SRC}/common/linux/breakpad_getcontext.S
         ${BREAKPAD_SRC}/common/linux/elfutils.cc
